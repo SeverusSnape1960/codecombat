@@ -315,7 +315,7 @@ module.exports = class CreateTeacherAccountView extends RootView
         window.application.tracker?.trackEvent 'Finished Signup', category: "Signup", label: loginMethod
       )
 
-      return Promise.all(trackerCalls...)
+      return Promise.all(trackerCalls)
 
     .then =>
       application.router.navigate(SIGNUP_REDIRECT, { trigger: true })
